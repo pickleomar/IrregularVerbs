@@ -88,7 +88,7 @@ function loadTable(){
 }
 
 function fetchImages(query) {
-    const apiKey = 'Qt76vsYduwc1Cie-BqoSrkQgwjLAwttMxBgSYHK6Y5A'; // Replace with your actual Unsplash API key
+    const apiKey = 'Qt76vsYduwc1Cie-BqoSrkQgwjLAwttMxBgSYHK6Y5A';
     const url = `https://api.unsplash.com/search/photos?query=${query}&client_id=${apiKey}`;
 
     fetch(url)
