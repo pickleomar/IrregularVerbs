@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>English Verbs</title>
+</head>
+<body>
+<div class="card">
+    <h1 class=arrows onclick=interchangePanel()>&#9664; &#9654;</h1>
+    <h2 class="deftext">English: Irregular Verbs<h2>
+</div>
+<div class="container">
+    <div class="table-container">
+        <table id="TableVerbs">
+        <thead>
+            <!--Dynamically generated-->
+            </thead>
+            <tbody>
+                <!--Dynamically generated-->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="right-panel">
+        <div class="VerbAndLetters">
+            <div class="verb-menu">
+                <button class="verb_add" onclick="AddVerb()">Add a verb</button>
+                <input class="input_verb" type="text" id="Nverb" placeholder="Verb to find.">
+                <button class="verb_find" onclick="findVerb()">Find</button>
+            </div>
+            <div class="letter-links">
+                <ul class="links">
+                    <li>Here is a link to <a href="#" onclick="scrollToVerb('a')">verbs that start with the letter <span style="color:red;font-weight:bold;">a</span></a></li>
+                    <li>Here is a link to <a href="#" onclick="scrollToVerb('b')">verbs that start with the letter <span style="color:red;font-weight:bold;">b</span></a></li>
+                    <li>Here is a link to <a href="#" onclick="scrollToVerb('c')">verbs that start with the letter <span style="color:red;font-weight:bold;">c</span></a></li>
+                    <li>Here is a link to <a href="#" onclick="scrollToVerb('d')">verbs that start with the letter <span style="color:red;font-weight:bold;">d</span></a></li>
+                    <li>Here is a link to <a href="#" onclick="scrollToVerb('e')">verbs that start with the letter <span style="color:red;font-weight:bold;">e</span></a></li>
+                    <li>Here is a link to <a href="#" onclick="scrollToVerb('f')">verbs that start with the letter <span style="color:red;font-weight:bold;">f</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="barcol"><span class="arrow" onclick="ReduireVolet()">&#9654;</span></div>
+        <div class="stats" id="statsBar">
+            <span>Statistics</span>
+            <div id="statsContent"></div>
+        </div>
+        </div>
+
+    </div>
+    
+</div>
+
+<div id="verbModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closeDialog()">&times;</span>
+        <h2 id="modalVerbTitle"></h2>
+        <h3>Definitions:</h3>
+        <ul id="modalDefinitions"></ul>
+        <h3>Synonyms:</h3>
+        <ul id="modalSynonyms"></ul>
+        <h3>Antonyms:</h3>
+        <ul id="modalAntonyms"></ul>
+        <h3>Images:</h3>
+        <div id="modalImages"></div>
+    </div>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>    
